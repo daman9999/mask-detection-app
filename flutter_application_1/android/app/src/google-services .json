@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "649266485411",
+    "firebase_url": "https://maskdetection-c678a-default-rtdb.firebaseio.com",
+    "project_id": "maskdetection-c678a",
+    "storage_bucket": "maskdetection-c678a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649266485411:android:5727a379a9e828a9170716",
+        "android_client_info": {
+          "package_name": "com.maskdetection.daman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649266485411-8li1sird5t8j4jefkmjoho62kgcm1q06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIonp9jPvvATf2Gw3tmu8dvhpaMpKLdzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649266485411-8li1sird5t8j4jefkmjoho62kgcm1q06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649266485411:android:d9a3d325c808f63b170716",
+        "android_client_info": {
+          "package_name": "com.maskdetectionapp.daman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649266485411-8li1sird5t8j4jefkmjoho62kgcm1q06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIonp9jPvvATf2Gw3tmu8dvhpaMpKLdzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649266485411-8li1sird5t8j4jefkmjoho62kgcm1q06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
