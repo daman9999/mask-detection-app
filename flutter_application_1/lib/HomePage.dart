@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
+import 'package:flutter_application_1/FullScreenImagePage .dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,6 +49,11 @@ class _HomePageState extends State<HomePage> {
                   elevation: 8.0,
                   borderRadius: BorderRadius.all(Radius.circular(8.0)),
                   child: InkWell(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                FullScreenImagePage(imgPath))),
                     child: Hero(
                         tag: imgPath,
                         child: FadeInImage(
@@ -56,8 +62,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-              staggeredTileBuilder: (int index) =>
-                  new StaggeredTile.count(2, index.isEven ? 2 : 3),
+              staggeredTileBuilder: (int index) => new StaggeredTile.fit(1),
               mainAxisSpacing: 8.0,
               crossAxisSpacing: 8.0,
               crossAxisCount: 2,
