@@ -14,17 +14,117 @@ class _FullScreenImagePageState extends State<FullScreenImagePage> {
   Widget build(BuildContext context) {
     return Container(
       height: 500,
-      child: Column(
-        children: <Widget>[
-          Expanded(
-            child: Dismissible(
-                direction: DismissDirection.vertical,
-                key: const Key('key'),
-                onDismissed: (_) => Navigator.of(context).pop(),
-                child: ImageWork(imgPath: widget.imgPath)),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: Dismissible(
+                  direction: DismissDirection.vertical,
+                  key: const Key('key'),
+                  onDismissed: (_) => Navigator.of(context).pop(),
+                  child: ImageWork(imgPath: widget.imgPath)),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.white,
+                ),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  topRight: Radius.circular(20.0),
+                ),
+              ),
+              height: (MediaQuery.of(context).size.height * 26) / 100,
+
+              //color: Colors.white,
+              child: Row(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          "Without mask Person detected",
+                          style: TextStyle(
+                            decoration: TextDecoration.none,
+                            color: Colors.black,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        SizedBox(height: 9),
+                        _layoutDetails(context),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
+    );
+  }
+}
+
+Widget _layoutDetails(context) {
+  Orientation o = MediaQuery.of(context).orientation;
+  if (o == Orientation.portrait) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        ElevatedButton(
+          /***onapreesed is to be implemented */
+          onPressed: () {},
+          child: Text("fine "),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.red[500],
+            padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
+            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+        ),
+        ElevatedButton(
+          /***onapreesed is to be implemented */
+          onPressed: () {},
+          child: Text("Dismiss "),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.black45,
+            padding: EdgeInsets.symmetric(horizontal: 110, vertical: 10),
+            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
+    );
+  } else {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: <Widget>[
+        ElevatedButton(
+          /***onapreesed is to be implemented */
+          onPressed: () {},
+          child: Text("fine "),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.red[500],
+            padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
+            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+        ),
+        SizedBox(
+          width: 10,
+        ),
+        ElevatedButton(
+          /***onapreesed is to be implemented */
+          onPressed: () {},
+          child: Text("Dismiss "),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.black45,
+            padding: EdgeInsets.symmetric(horizontal: 110, vertical: 10),
+            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+        ),
+      ],
     );
   }
 }
