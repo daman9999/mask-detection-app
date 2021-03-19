@@ -75,58 +75,35 @@ Widget _layoutDetails(context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        ElevatedButton(
-          /***onapreesed is to be implemented */
-          onPressed: () {},
-          child: Text("fine "),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red[500],
-            padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
-            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-          ),
-        ),
-        ElevatedButton(
-          /***onapreesed is to be implemented */
-          onPressed: () {},
-          child: Text("Dismiss "),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.black45,
-            padding: EdgeInsets.symmetric(horizontal: 110, vertical: 10),
-            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-          ),
-        ),
+        //onpressed to be implemented
+        buttonElevate(Colors.red[500], 120, "fine", () {}),
+        SizedBox(height: 9),
+        buttonElevate(Colors.black45, 110, "Dismiss", () {}),
       ],
     );
   } else {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: <Widget>[
-        ElevatedButton(
-          /***onapreesed is to be implemented */
-          onPressed: () {},
-          child: Text("fine "),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.red[500],
-            padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
-            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-          ),
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        ElevatedButton(
-          /***onapreesed is to be implemented */
-          onPressed: () {},
-          child: Text("Dismiss "),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.black45,
-            padding: EdgeInsets.symmetric(horizontal: 110, vertical: 10),
-            textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-          ),
-        ),
+        buttonElevate(Colors.red[500], 120, "fine", () {}),
+        SizedBox(width: 9),
+        buttonElevate(Colors.black45, 110, "Dismiss", () {}),
       ],
     );
   }
+}
+
+Widget buttonElevate(Color btnclr, double hori, String tex, Function func) {
+  return ElevatedButton(
+    /***onapreesed is to be implemented */
+    onPressed: func,
+    child: Text(tex),
+    style: ElevatedButton.styleFrom(
+      primary: btnclr,
+      padding: EdgeInsets.symmetric(horizontal: hori, vertical: 10),
+      textStyle: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+    ),
+  );
 }
 
 class ImageWork extends StatelessWidget {
